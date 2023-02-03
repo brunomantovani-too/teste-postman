@@ -1,0 +1,1222 @@
+{
+	"info": {
+		"_postman_id": "d5815389-59f6-459f-966b-cce37ac0f592",
+		"name": "api-portal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23267791-d5815389-59f6-459f-966b-cce37ac0f592"
+	},
+	"item": [
+		{
+			"name": "Subscrição",
+			"item": [
+				{
+					"name": "1. Iniciar",
+					"id": "04a7a529-235c-4031-ab3b-8313c9c53b4c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "clientId",
+								"value": "{{portal-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "clientSecret",
+								"value": "{{portal-client-secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/analise/subscricao/70f5e3f2-0863-4c2a-bf8d-26df4acb4f71?leitura=false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"analise",
+								"subscricao",
+								"70f5e3f2-0863-4c2a-bf8d-26df4acb4f71"
+							],
+							"query": [
+								{
+									"key": "leitura",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. Liberar",
+					"id": "e4eb7752-8065-42aa-97ce-f1dbc186ef79",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "clientId",
+								"value": "{{portal-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "clientSecret",
+								"value": "{{portal-client-secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/analise/subscricao/liberar-analise/70f5e3f2-0863-4c2a-bf8d-26df4acb4f71",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"analise",
+								"subscricao",
+								"liberar-analise",
+								"70f5e3f2-0863-4c2a-bf8d-26df4acb4f71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aprovar Análise",
+					"id": "c9533730-75ff-45a4-84ae-7a7b9c14a242",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "clientId",
+								"value": "{{portal-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "clientSecret",
+								"value": "{{portal-client-secret}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": 4\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/analise/subscricao/cc8ed137-cfd4-4b05-86ee-bdffc0887079/finalizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"analise",
+								"subscricao",
+								"cc8ed137-cfd4-4b05-86ee-bdffc0887079",
+								"finalizar"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "6218b91e-f6f7-4a7c-9382-19cc9c522859"
+		},
+		{
+			"name": "Proposta",
+			"item": [
+				{
+					"name": "1. Registrar ficha",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "e0fe6b61-59d8-4cb5-82ee-c2248ac6224d",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "59943706-e2fa-4c4a-acca-3337b376bc27",
+								"exec": [
+									"pm.environment.set(\"propostaId\", pm.response.json().propostaId);\r",
+									"pm.environment.set(\"propostaNumero\", pm.response.json().numero);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "6dc72910-3ad8-44bc-85fa-361f5a686eea",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "clientId",
+								"value": "{{portal-client-id}}"
+							},
+							{
+								"key": "clientSecret",
+								"value": "{{portal-client-secret}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pretendentes\": [\r\n        {\r\n            \"tipo\": 1,\r\n            \"id\": \"\",\r\n            \"nome\": \"Teste Teste\",\r\n            \"cpf\": \"68732843003\",\r\n            \"resideImovel\": true,\r\n            \"nascimento\": \"2000-01-01T02:00:00.000Z\",\r\n            \"respondeFinanceiramente\": true,\r\n            \"renda\": \"5000\",\r\n            \"profissao\": \"Desenvolvedor\",\r\n            \"vinculoEmpregaticio\": \"2\"\r\n        }\r\n    ],\r\n    \"imovelPretendido\": {\r\n        \"finalidade\": 1\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/seguroNovo/{{cnpj-corretora}}/ficha",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"seguroNovo",
+								"{{cnpj-corretora}}",
+								"ficha"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. Solicitar análise crédito",
+					"id": "ed3f52c0-dd21-4a69-9528-68021d6ae78d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "clientId",
+								"value": "{{portal-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "clientSecret",
+								"value": "{{portal-client-secret}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"{{propostaId}}\",\r\n    \"numero\": \"{{propostaNumero}}\",\r\n    \"pretendentes\": [\r\n        {\r\n            \"tipo\": 1,\r\n            \"id\": \"\",\r\n            \"nome\": \"Teste Teste\",\r\n            \"cpf\": \"68732843003\",\r\n            \"resideImovel\": true,\r\n            \"nascimento\": \"2000-01-01T02:00:00.000Z\",\r\n            \"respondeFinanceiramente\": true,\r\n            \"renda\": \"5000\",\r\n            \"profissao\": \"Desenvolvedor\",\r\n            \"vinculoEmpregaticio\": \"2\"\r\n        }\r\n    ],\r\n    \"imovelPretendido\": {\r\n        \"finalidade\": 1,\r\n        \"valorLocacao\": {\r\n            \"aluguel\": \"300\",\r\n            \"encargos\": \"0\"\r\n        },\r\n        \"cep\": \"07023022\",\r\n        \"bairro\": \"Vila Augusta\",\r\n        \"logradouro\": \"Rua Santa Izabel\",\r\n        \"cidade\": \"Guarulhos\",\r\n        \"uf\": \"SP\",\r\n        \"observacao\": null,\r\n        \"ocupante\": {\r\n            \"cpf\": null,\r\n            \"nome\": null\r\n        }\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/seguroNovo/{{cnpj-corretora}}/ficha/solicitar-analise-credito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"seguroNovo",
+								"{{cnpj-corretora}}",
+								"ficha",
+								"solicitar-analise-credito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3. Listar propostas",
+					"id": "5ef41bbf-2438-447f-a2f3-7b3a6c0f82c1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "clientId",
+								"value": "{{portal-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "clientSecret",
+								"value": "{{portal-client-secret}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": [],\r\n    \"imobiliaria\": [],\r\n    \"tipoPessoa\": [],\r\n    \"finalidadeLocacao\": [],\r\n    \"numero\": \"{{propostaNumero}}\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/seguroNovo/{{cnpj-corretora}}/fianca/listar?pagina=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"seguroNovo",
+								"{{cnpj-corretora}}",
+								"fianca",
+								"listar"
+							],
+							"query": [
+								{
+									"key": "pagina",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transmitir",
+					"id": "ffd595d5-902e-473c-82b0-da88e113ebd1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "clientId",
+								"value": "{{portal-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "clientSecret",
+								"value": "{{portal-client-secret}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"parcelas\": [\r\n        {\r\n            \"tipoPagamento\": \"Boleto\",\r\n            \"comEntrada\": true,\r\n            \"desconto\": 20,\r\n            \"numeroparcela\": 0,\r\n            \"valorDesconto\": 261.48,\r\n            \"valorIof\": 77.19,\r\n            \"valorParcela\": 1123.12,\r\n            \"valorTotal\": 1123.12\r\n        }\r\n    ],\r\n    \"comEntrada\": true,\r\n    \"imobiliariaSelecionadaCnpj\": null,\r\n    \"imobiliariaSelecionadaNomeRazao\": null,\r\n    \"condicaoPagamento\": \"Boleto\",\r\n    \"criticadoMesaCredito\": false\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/proposta/{{cnpj-corretora}}/1074600027847/transmitir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"proposta",
+								"{{cnpj-corretora}}",
+								"1074600027847",
+								"transmitir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verificar se está expirada",
+					"id": "8899bd80-e866-4af5-a859-bd258635bf8c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "clientId",
+								"value": "{{portal-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "clientSecret",
+								"value": "{{portal-client-secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/proposta/{{cnpj-corretora}}/{{propostaNumero}}/expirada",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"proposta",
+								"{{cnpj-corretora}}",
+								"{{propostaNumero}}",
+								"expirada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Proposta",
+					"id": "47694d72-a50e-46fb-853e-72220178c71b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "clientId",
+								"value": "{{portal-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "clientSecret",
+								"value": "{{portal-client-secret}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"coberturas\": [\r\n        {\r\n            \"descricao\": \"Aluguel\",\r\n            \"valorSegurado\": 750,\r\n            \"tipoCobertura\": 1\r\n        },\r\n        {\r\n            \"descricao\": \"Multas Contratuais\",\r\n            \"valorSegurado\": 750,\r\n            \"tipoCobertura\": 3\r\n        },\r\n        {\r\n            \"descricao\": \"Danos Ao Imóvel\",\r\n            \"valorSegurado\": 750,\r\n            \"tipoCobertura\": 3\r\n        },\r\n        {\r\n            \"descricao\": \"Pintura Interna\",\r\n            \"valorSegurado\": 750,\r\n            \"tipoCobertura\": 3\r\n        }\r\n    ],\r\n    \"locatarios\": [],\r\n    \"vigenciaInicio\": \"2022-12-23T03:00:00\",\r\n    \"vigenciaTermino\": \"2023-12-23T03:00:00\",\r\n    \"percentual\": 15,\r\n    \"remuneracaoImobiliaria\": 0\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/proposta/23168162000139/coberturas/1074600027847",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"proposta",
+								"23168162000139",
+								"coberturas",
+								"1074600027847"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "143cc8c6-6904-48d3-8b5d-07b6cc374379"
+		},
+		{
+			"name": "Apólices",
+			"item": [
+				{
+					"name": "Detalhar",
+					"id": "cab72c54-ac90-4c06-8841-3ac119e9a543",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "clientId",
+								"value": "{{portal-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "clientSecret",
+								"value": "{{portal-client-secret}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroApolice\": \"{{apoliceNumero}}\",\r\n    \"cpfCnpjCorretor\": \"{{cnpj-corretora}}\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/apolice/detalhar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"apolice",
+								"detalhar"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "ee8caf80-fa30-40f7-8877-4df6629ed685"
+		},
+		{
+			"name": "Análise de Crédito",
+			"item": [
+				{
+					"name": "Anexar evidência de crédito",
+					"id": "996c020b-d1f5-4b3d-be15-76ff1b0d43d7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "clientId",
+								"value": "{{portal-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "clientSecret",
+								"value": "{{portal-client-secret}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "PropostaId",
+									"value": "a8a8aa9e-2651-4a93-9a2e-4f417cb24a71",
+									"type": "text"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste.png"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia.png"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (2).png"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (3).png"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (4).png"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (5).png"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (6).png"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (7).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/seguroNovo/a8a8aa9e-2651-4a93-9a2e-4f417cb24a71/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"seguroNovo",
+								"a8a8aa9e-2651-4a93-9a2e-4f417cb24a71",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resolver Pendência",
+					"id": "67a631bd-5040-48ea-9a6d-dc55e5cc2ed0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "clientId",
+								"value": "{{portal-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "clientSecret",
+								"value": "{{portal-client-secret}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"a8a8aa9e-2651-4a93-9a2e-4f417cb24a71\",\r\n    \"observacao\": \"Teste\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/seguroNovo/23168162000139/ficha/resolver-pendencia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"seguroNovo",
+								"23168162000139",
+								"ficha",
+								"resolver-pendencia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reprocessar Análise de Crédito",
+					"id": "5a6c187a-a517-4adf-ab21-dfc8f35800da",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "clientId",
+								"value": "{{portal-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "clientSecret",
+								"value": "{{portal-client-secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/analise/credito/58411cef-f3ca-4b34-a6f0-7f8906190e5b/bureaus?proposta_id=0699ac48-e511-42ff-bf59-2543e526fa8a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"analise",
+								"credito",
+								"58411cef-f3ca-4b34-a6f0-7f8906190e5b",
+								"bureaus"
+							],
+							"query": [
+								{
+									"key": "proposta_id",
+									"value": "0699ac48-e511-42ff-bf59-2543e526fa8a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Analisar Crédito",
+					"id": "e4e5fd54-cee3-4502-9637-5b60670dbb68",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "clientId",
+								"value": "{{portal-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "clientSecret",
+								"value": "{{portal-client-secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/clientes/08863029431/propostas/2301163460571/analisar-credito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"clientes",
+								"08863029431",
+								"propostas",
+								"2301163460571",
+								"analisar-credito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Análises Pendentes",
+					"id": "7a16573c-21e4-4e3b-b90e-5ed97ea6466e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeDocumento\": \"\",\r\n    \"numeroFicha\": \"\",\r\n    \"cnpjCorretora\": \"\",\r\n    \"status\": \"\",\r\n    \"parceirosDigitais\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/analise/credito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"analise",
+								"credito"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "46d212c6-8498-4f32-84cc-f2b70f0aae2b"
+		},
+		{
+			"name": "Cotação",
+			"item": [
+				{
+					"name": "Cotar",
+					"id": "56b8eff5-a212-4f50-ae4b-dc8f0e8eab57",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigoProduto\": 279,\r\n    \"propostaId\": \"3e2bb7e6-5884-4dbf-8df3-5e1a4a42a844\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/seguroNovo/23168162000139/fianca/oferta/processo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"seguroNovo",
+								"23168162000139",
+								"fianca",
+								"oferta",
+								"processo"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "097e09f6-878f-45b5-af3a-d41bca68a895"
+		},
+		{
+			"name": "Renovação",
+			"item": [
+				{
+					"name": "Listar",
+					"id": "1a2856e3-e02b-4915-bbac-c72b295c23ad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/apolice/renovacao/elegiveis/listar/23168162000139",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"apolice",
+								"renovacao",
+								"elegiveis",
+								"listar",
+								"23168162000139"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "45ce7af8-9c54-44c5-92b9-ce117888964e"
+		},
+		{
+			"name": "Combos",
+			"item": [
+				{
+					"name": "Listar Corretoras",
+					"id": "75d7d436-faa4-4c08-9450-6da2df480e3d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "clientId",
+								"value": "{{portal-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "clientSecret",
+								"value": "{{portal-client-secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/corretora/listar/hierarquia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"corretora",
+								"listar",
+								"hierarquia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Imobiliárias",
+					"id": "a6b582fc-6934-40f8-8967-a968514e9c0b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/portal/imobiliarias/02761226000130",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"portal",
+								"imobiliarias",
+								"02761226000130"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Detalhe da Imobiliária",
+					"id": "058bab02-1e86-4c8a-94ea-c2d2480029a5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "clientId",
+								"value": "{{portal-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "clientSecret",
+								"value": "{{portal-client-secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/portal/detalhe-imobiliaria/02761226000130",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"portal",
+								"detalhe-imobiliaria",
+								"02761226000130"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "5a24a269-73b1-4bc3-a17d-6f04e374fb07"
+		},
+		{
+			"name": "Autenticar",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "88bcad3e-52f6-44a8-8b44-27529a9d4b73",
+						"exec": [
+							"pm.environment.set(\"token\", pm.response.json().access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "62b3775d-5210-4bf9-b664-6c7aa7342a8d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"type": "text",
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"type": "text",
+							"key": "username",
+							"value": "{{portal-user-username}}"
+						},
+						{
+							"type": "text",
+							"key": "password",
+							"value": "{{portal-user-password}}"
+						},
+						{
+							"type": "text",
+							"key": "client_id",
+							"value": "{{portal-client-id}}"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://{{apigee-url}}/authentication",
+					"protocol": "https",
+					"host": [
+						"{{apigee-url}}"
+					],
+					"path": [
+						"authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Recibo Recentes",
+			"id": "734e789b-d379-4518-88db-2ce7095e36f5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "clientId",
+						"value": "{{portal-client-id}}",
+						"type": "text"
+					},
+					{
+						"key": "clientSecret",
+						"value": "{{portal-client-secret}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/recibo/listar/42477710000157/recentes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recibo",
+						"listar",
+						"42477710000157",
+						"recentes"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "690fbd9e-588a-417c-95f1-d97e0bd5bc5d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f6d833b4-f11e-4dd9-950d-aecbfb5ba4e3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
