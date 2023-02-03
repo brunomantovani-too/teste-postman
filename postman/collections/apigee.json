@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "85305893-3a24-4f5b-8b4e-936a32f97864",
+		"name": "apigee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23267791-85305893-3a24-4f5b-8b4e-936a32f97864"
+	},
+	"item": [
+		{
+			"name": "fianca",
+			"item": [
+				{
+					"name": "cotacao",
+					"item": [
+						{
+							"name": ":id:long",
+							"id": "4a8e4b16-3726-4355-8bec-da1fd3589ec5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "clientid",
+										"value": "{{clientid}}"
+									},
+									{
+										"key": "clientsecret",
+										"value": "{{clientsecret}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJteVFXOGVJeGhEN0FIcDVOeXJVcVR3TDhrdzZsUEtGUmFKZWhxWFA0aWtvIn0.eyJleHAiOjE2NzE0OTIyMDgsImlhdCI6MTY3MTQ3NDIwOCwianRpIjoiZjFjZjhmM2YtZWY0OC00OWQwLTliOTktZGZmYjFkNjBlMzFhIiwiaXNzIjoiaHR0cHM6Ly9vcGVuLWFwaS50b29zZWd1cm9zLmNvbS5ici9rZXljbG9hay9hdXRoL3JlYWxtcy9vcGVuaWQtYmFja2VuZC1rdWJlIiwic3ViIjoiNWIwZGRmZDItOWVmOS00YWZlLTlmMGQtZWMxMzYxMGU2NDJjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZTlhN2EzNjIxYTczMTFlZDg2MWQwMjQyYWMxMjAwMDIiLCJhY3IiOiIxIiwic2NvcGUiOiJlbWFpbCBhdXRob3JpemVkX2FwcHMgcHJvZmlsZSIsImNsaWVudElkIjoiZTlhN2EzNjIxYTczMTFlZDg2MWQwMjQyYWMxMjAwMDIiLCJjbGllbnRIb3N0IjoiMTkyLjE2OC42My4xMjgiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1lOWE3YTM2MjFhNzMxMWVkODYxZDAyNDJhYzEyMDAwMiIsImNsaWVudEFkZHJlc3MiOiIxOTIuMTY4LjYzLjEyOCIsImF1dGhvcml6ZWRfYXBwcyI6WyJwcm9wb3N0YXMiLCJhcG9saWNlIiwiYXBpLWNvdGFjYW8iLCJhbmFsaXNlLWRlLWNyZWRpdG8iXX0.r0_Az8BXfCjDsKklR0Qj6Q-JXl3QopusfO2hLAhxisWrABFwGINcLCSIQPPOexsikYRtYKKvuKdkP1fl_UrosPjWPlaqFix4jNrlNRc8_hMjYNFS8sUyLQvDvbbT-VO2Ahn9uMeCdOM7ieUB1gph-JI_O-8xHwGlOOtrGqYEqDorG9K8xzU-HnQR7DNR6LVo5VDSbAHILNZkt7mHHc3dlMfpcbczHKtyrlzI_H0Y51usCHpaK3Hwv6SBWdQGBH64e_InZMOuAhiOUs1EOlaR3GNQh1PPqm1WYaRrYTgw_KVN1hl5egyKr-G-edv4RG6AcQSc9cVbso69hOpx-kAQ"
+									}
+								],
+								"url": {
+									"raw": "https://{{apigeeurl}}/fianca/cotacao/1287475",
+									"protocol": "https",
+									"host": [
+										"{{apigeeurl}}"
+									],
+									"path": [
+										"fianca",
+										"cotacao",
+										"1287475"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "aluguel-garantido",
+							"id": "aaf909e3-d094-4e33-bf97-27f107577095",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "clientid",
+										"value": "{{clientid}}"
+									},
+									{
+										"key": "clientsecret",
+										"value": "{{clientsecret}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"cnpjCorretor\": \"28111319000103\",\n  \"razaoSocialCorretor\": \"GARDI CORRETORA E ADMINISTRADORA DE SEGUROS LTDA.\",\n  \"cep\": \"79071010\",\n  \"inicioVigencia\": \"2022-12-19\",\n  \"fimVigencia\": \"2025-06-19\",\n  \"finalidadeLocacao\": \"Residencial\",\n  \"indiceReajusteAluguel\": \"IGPM\",\n  \"percentualComissao\": 0.2,\n  \"periodoIndAluguel\": 30,\n  \"tipoPessoa\": \"Pessoa Fisica\",\n  \"tipoSeguro\": \"Novo\",\n  \"valorAluguel\": 900,\n  \"valorAgua\": 0,\n  \"valorCondominio\": 0,\n  \"valorGas\": 0,\n  \"valorIptu\": 100,\n  \"valorLuz\": 0,\n  \"valorDanosAMoveis\": 0,\n  \"valorDanosAoImovel\": 900,\n  \"valorMultasContratuais\": 900,\n  \"valorPinturaExterna\": 900,\n  \"valorPinturaInterna\": 900\n}"
+								},
+								"url": {
+									"raw": "https://{{apigeeurl}}/fianca/cotacao/aluguel-garantido",
+									"protocol": "https",
+									"host": [
+										"{{apigeeurl}}"
+									],
+									"path": [
+										"fianca",
+										"cotacao",
+										"aluguel-garantido"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "b9205de8-0577-4d52-a14c-98ef32b9cb25"
+				}
+			],
+			"id": "79bffc48-c94f-42be-be74-d041deacf417"
+		}
+	]
+}

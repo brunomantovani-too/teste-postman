@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "d529d7b4-50b2-483a-8d62-99cb3f5dd25d",
+		"name": "api-credito",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23267791-d529d7b4-50b2-483a-8d62-99cb3f5dd25d"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "{cpf}/propostas/{numero}/analisar-credito",
+					"id": "76fc0861-a67b-4e62-b41d-e2c9058c48b4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "clientid",
+								"value": "cb4d98d674b411eda1eb0242ac120002",
+								"type": "text"
+							},
+							{
+								"key": "clientsecret",
+								"value": "cd33818874b411eda1eb-0242ac120002",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJteVFXOGVJeGhEN0FIcDVOeXJVcVR3TDhrdzZsUEtGUmFKZWhxWFA0aWtvIn0.eyJleHAiOjE2Nz",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/clientes/45822398898/propostas/2301043460055/analisar-credito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"clientes",
+								"45822398898",
+								"propostas",
+								"2301043460055",
+								"analisar-credito"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "cb83fea2-265a-4847-a518-4d8602fbd95a"
+		}
+	]
+}

@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "8b45bc5a-4af7-4793-92a7-5abe1cdd24b9",
+		"name": "api-portal-bff",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23267791-8b45bc5a-4af7-4793-92a7-5abe1cdd24b9"
+	},
+	"item": [
+		{
+			"name": "Obter Imobiliárias",
+			"id": "426e21cc-f35f-4aca-82e9-32d7776560f3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/portal/imobiliarias/02577669000176",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"portal",
+						"imobiliarias",
+						"02577669000176"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ad80daf2-a820-4b56-b758-ebb220ab952e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4a47d247-ab25-4543-97a9-d52ac5d20b2c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

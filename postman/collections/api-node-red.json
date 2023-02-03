@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "d4282f32-b96d-42ee-b9c5-69a640326703",
+		"name": "api-node-red",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23267791-d4282f32-b96d-42ee-b9c5-69a640326703"
+	},
+	"item": [
+		{
+			"name": "https://node-red-hml-interno.tooseguros.com.br/api/fianca/precoaluguelgarantido-entrada",
+			"id": "6c20a117-03b2-4a12-b0ef-21698274c796",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \"cnpjCorretor\": \"10961528000187\",    \"razaoSocialCorretor\": \"razao Social Corretor2222\",    \"valorPinturaInterna\": 1500,    \"valorDanosAoImovel\": 1500,    \"valorPinturaExterna\": 1500,    \"valorMultasContratuais\": 1500,    \"valorGas\": 100,    \"valorLuz\": 100,    \"valorCondominio\": 500,    \"valorDanosAMoveis\": 1500,    \"valorAluguel\": 1500,    \"valorIptu\": 60,    \"valorAgua\": 81,    \"fimVigencia\": \"2024-09-17\",    \"inicioVigencia\": \"2021-09-17\",    \"cep\": \"05086010\",    \"percentualComissao\": 0.1,    \"tipoPessoa\": \"Pessoa Fisica\",    \"tipoSeguro\": \"Novo\",    \"periodoIndAluguel\": 30,    \"indiceReajusteAluguel\": \"IGPM\",    \"finalidadeLocacao\": \"Residencial\",    \"dataSolicitacao\": \"2023-01-17\",    \"numeroFicha\":61,    \"tipoAnalise\": \"Novo\"}"
+				},
+				"url": {
+					"raw": "https://node-red-hml-interno.tooseguros.com.br/api/fianca/precoaluguelgarantido-entrada",
+					"protocol": "https",
+					"host": [
+						"node-red-hml-interno",
+						"tooseguros",
+						"com",
+						"br"
+					],
+					"path": [
+						"api",
+						"fianca",
+						"precoaluguelgarantido-entrada"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

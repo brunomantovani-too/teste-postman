@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "db9c8482-9a38-4194-bc8f-d4ce70d27f83",
+		"name": "api-cep",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23267791-db9c8482-9a38-4194-bc8f-d4ce70d27f83"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "v1/cep/{0}",
+					"id": "33198e06-8a7a-491c-b9ee-4694fe0834df",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5085/v1/cep/07023022",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5085",
+							"path": [
+								"v1",
+								"cep",
+								"07023022"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "702789b7-1d69-4477-ad56-26ed4607d055"
+		},
+		{
+			"name": "v2",
+			"item": [
+				{
+					"name": "addresses?zipCode={0}",
+					"id": "7136275b-98af-4f86-b2a8-8b7893530212",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5085/v2/addresses?zipCode=07023022",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5085",
+							"path": [
+								"v2",
+								"addresses"
+							],
+							"query": [
+								{
+									"key": "zipCode",
+									"value": "07023022"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "52fae666-b68f-4048-bf6f-d49088cb8c06"
+		},
+		{
+			"name": "api/cep/{0}",
+			"id": "f21ae235-e5a6-418a-9913-bd35079dc486",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5085/v2/Addresses?zipCode=07023022",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5085",
+					"path": [
+						"v2",
+						"Addresses"
+					],
+					"query": [
+						{
+							"key": "zipCode",
+							"value": "07023022"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

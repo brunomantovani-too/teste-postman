@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "20399390-0fa2-45d6-9e6a-bb4a365d11f1",
+		"name": "api-apolice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23267791-20399390-0fa2-45d6-9e6a-bb4a365d11f1"
+	},
+	"item": [
+		{
+			"name": "Obter Apólice",
+			"id": "149b57db-927a-40b5-a257-29157115fd8f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "clientId",
+						"value": "{{portal-client-id}}",
+						"type": "text"
+					},
+					{
+						"key": "clientSecret",
+						"value": "{{portal-client-secret}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51156/api/apolices/search?dataOcorrencia=&numCnpjCpfSegurado=13906622681&numBilhete=&numCertificado=&numApolice=&codigoCobertura=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51156",
+					"path": [
+						"api",
+						"apolices",
+						"search"
+					],
+					"query": [
+						{
+							"key": "dataOcorrencia",
+							"value": ""
+						},
+						{
+							"key": "numCnpjCpfSegurado",
+							"value": "13906622681"
+						},
+						{
+							"key": "numBilhete",
+							"value": ""
+						},
+						{
+							"key": "numCertificado",
+							"value": ""
+						},
+						{
+							"key": "numApolice",
+							"value": ""
+						},
+						{
+							"key": "codigoCobertura",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

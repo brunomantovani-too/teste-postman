@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "38f67f28-beb0-4a25-bb18-cceecb305117",
+		"name": "api-proposta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23267791-38f67f28-beb0-4a25-bb18-cceecb305117"
+	},
+	"item": [
+		{
+			"name": "v2",
+			"item": [
+				{
+					"name": "api/v2/clientes/{cpf}/propostas",
+					"id": "7af134ae-3d3a-4f96-9d6c-51c6d91162c4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "clientid",
+								"value": "cb4d98d674b411eda1eb0242ac120002",
+								"type": "text"
+							},
+							{
+								"key": "clientsecret",
+								"value": "cd33818874b411eda1eb-0242ac120002",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJteVFXOGVJeGhEN0FIcDVOeXJVcVR3TDhrdzZsUEtGUmFKZWhxWFA0aWtvIn0.eyJleHAiOjE2Nz",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCotacao\": 1314130,\r\n    \"locacao\": {\r\n        \"cep\": \"13475010\",\r\n        \"logradouro\": \"Avenida Comendador Thomaz Fortunato\",\r\n        \"numero\": \"2000\",\r\n        \"complemento\": \"Bloco 15, apto 304\",\r\n        \"bairro\": \"Chácara Letônia\",\r\n        \"cidade\": \"Americana\",\r\n        \"uf\": \"SP\",\r\n        \"periodicidadeLocacao\": \"Anual\",\r\n        \"dataInicioVigenciaLocacao\": \"2023-01-05\",\r\n        \"dataFimVigenciaLocacao\": \"2026-01-05\",\r\n        \"empresaConstituida\": null\r\n    },\r\n    \"pretendentes\": [\r\n        {\r\n            \"nome\": \"Rayssa Ribeiro da Silva\",\r\n            \"cpf\": \"50224017896\",\r\n            \"dataNascimento\": \"2004-05-19\",\r\n            \"estadoCivil\": \"Solteiro\",\r\n            \"residiraImovel\": true,\r\n            \"responsavelFinanceiroPeloImovel\": true,\r\n            \"rendaFixaMensal\": \"2500.00\",\r\n            \"outrasRendas\": \"0.00\",\r\n            \"vinculoEmpregaticio\": \"Clt\",\r\n            \"profissao\": \"Clt\",\r\n            \"cep\": \"13478866\",\r\n            \"pessoaPoliticamenteExposta\": \"NaoInformado\",\r\n            \"telefone\": {\r\n                \"ddd\": 19,\r\n                \"numero\": 982155946,\r\n                \"tiposNotificacao\": [\r\n                    \"SMS\"\r\n                ],\r\n                \"tipoTelefone\": \"Celular\"\r\n            }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v2/clientes/50224017896/propostas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v2",
+								"clientes",
+								"50224017896",
+								"propostas"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "1ea6e5db-704e-44e7-884e-24b4a3911a63"
+		}
+	]
+}

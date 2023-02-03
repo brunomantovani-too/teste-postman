@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "d5815389-59f6-459f-966b-cce37ac0f592",
+		"_postman_id": "954c6d87-a3d2-4539-9079-95079c3f081d",
 		"name": "api-portal",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "23267791-d5815389-59f6-459f-966b-cce37ac0f592"
+		"_uid": "23267791-954c6d87-a3d2-4539-9079-95079c3f081d"
 	},
 	"item": [
 		{
@@ -11,7 +11,7 @@
 			"item": [
 				{
 					"name": "1. Iniciar",
-					"id": "04a7a529-235c-4031-ab3b-8313c9c53b4c",
+					"id": "838293c2-e2f2-4418-8bbd-5fef8346f887",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -69,7 +69,7 @@
 				},
 				{
 					"name": "2. Liberar",
-					"id": "e4eb7752-8065-42aa-97ce-f1dbc186ef79",
+					"id": "3842b644-4271-41a4-9fc7-e9fb22aabb4a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -122,7 +122,7 @@
 				},
 				{
 					"name": "Aprovar Análise",
-					"id": "c9533730-75ff-45a4-84ae-7a7b9c14a242",
+					"id": "54a10c3a-82b9-44d1-ab5f-94539b8dd0a5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -168,7 +168,7 @@
 					"response": []
 				}
 			],
-			"id": "6218b91e-f6f7-4a7c-9382-19cc9c522859"
+			"id": "188aa35e-4bfc-44e1-8d67-d4c74dc6ddaa"
 		},
 		{
 			"name": "Proposta",
@@ -179,7 +179,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "e0fe6b61-59d8-4cb5-82ee-c2248ac6224d",
+								"id": "1f362470-e204-4cf5-85d5-f7c54925a739",
 								"exec": [
 									""
 								],
@@ -189,7 +189,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "59943706-e2fa-4c4a-acca-3337b376bc27",
+								"id": "c2e7ffb8-8e77-4c46-88f3-732d6822d7e1",
 								"exec": [
 									"pm.environment.set(\"propostaId\", pm.response.json().propostaId);\r",
 									"pm.environment.set(\"propostaNumero\", pm.response.json().numero);"
@@ -198,7 +198,7 @@
 							}
 						}
 					],
-					"id": "6dc72910-3ad8-44bc-85fa-361f5a686eea",
+					"id": "e6d7cc7b-d026-4945-b3f9-54f3ac6987d7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -251,7 +251,7 @@
 				},
 				{
 					"name": "2. Solicitar análise crédito",
-					"id": "ed3f52c0-dd21-4a69-9528-68021d6ae78d",
+					"id": "38c79b72-f06e-4833-b572-d392b5f87cbd",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -308,7 +308,7 @@
 				},
 				{
 					"name": "3. Listar propostas",
-					"id": "5ef41bbf-2438-447f-a2f3-7b3a6c0f82c1",
+					"id": "96f6bf08-63e1-41c2-861d-0efd77a26205",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -371,7 +371,7 @@
 				},
 				{
 					"name": "Transmitir",
-					"id": "ffd595d5-902e-473c-82b0-da88e113ebd1",
+					"id": "4fb19c6f-6b0b-4160-9e2e-d9c0984be60a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -428,7 +428,7 @@
 				},
 				{
 					"name": "Verificar se está expirada",
-					"id": "8899bd80-e866-4af5-a859-bd258635bf8c",
+					"id": "63bfe691-1543-4f71-b948-ac0430abcb12",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -481,7 +481,7 @@
 				},
 				{
 					"name": "Atualizar Proposta",
-					"id": "47694d72-a50e-46fb-853e-72220178c71b",
+					"id": "77508c1a-2176-4e9f-a454-2d5065a1725d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -527,14 +527,14 @@
 					"response": []
 				}
 			],
-			"id": "143cc8c6-6904-48d3-8b5d-07b6cc374379"
+			"id": "164cf78d-0baf-4114-856a-9fdb7305890a"
 		},
 		{
 			"name": "Apólices",
 			"item": [
 				{
 					"name": "Detalhar",
-					"id": "cab72c54-ac90-4c06-8841-3ac119e9a543",
+					"id": "ff287db6-99d9-4bcc-b23d-9408adf231f0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -578,14 +578,14 @@
 					"response": []
 				}
 			],
-			"id": "ee8caf80-fa30-40f7-8877-4df6629ed685"
+			"id": "dffeca96-4940-413c-b100-6a212bfdd334"
 		},
 		{
 			"name": "Análise de Crédito",
 			"item": [
 				{
 					"name": "Anexar evidência de crédito",
-					"id": "996c020b-d1f5-4b3d-be15-76ff1b0d43d7",
+					"id": "eeb07e92-0fe9-4b8c-8505-00fe1e068877",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -619,42 +619,58 @@
 								{
 									"key": "files",
 									"type": "file",
-									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste.png"
+									"src": [
+										"/C:/Users/brunomantovani/Desktop/ImgTeste.png"
+									]
 								},
 								{
 									"key": "files",
 									"type": "file",
-									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia.png"
+									"src": [
+										"/C:/Users/brunomantovani/Desktop/ImgTeste - Copia.png"
+									]
 								},
 								{
 									"key": "files",
 									"type": "file",
-									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (2).png"
+									"src": [
+										"/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (2).png"
+									]
 								},
 								{
 									"key": "files",
 									"type": "file",
-									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (3).png"
+									"src": [
+										"/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (3).png"
+									]
 								},
 								{
 									"key": "files",
 									"type": "file",
-									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (4).png"
+									"src": [
+										"/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (4).png"
+									]
 								},
 								{
 									"key": "files",
 									"type": "file",
-									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (5).png"
+									"src": [
+										"/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (5).png"
+									]
 								},
 								{
 									"key": "files",
 									"type": "file",
-									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (6).png"
+									"src": [
+										"/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (6).png"
+									]
 								},
 								{
 									"key": "files",
 									"type": "file",
-									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (7).png"
+									"src": [
+										"/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (7).png"
+									]
 								}
 							]
 						},
@@ -677,7 +693,7 @@
 				},
 				{
 					"name": "Resolver Pendência",
-					"id": "67a631bd-5040-48ea-9a6d-dc55e5cc2ed0",
+					"id": "7b6d4223-f46d-434e-9729-d01623752e70",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -724,7 +740,7 @@
 				},
 				{
 					"name": "Reprocessar Análise de Crédito",
-					"id": "5a6c187a-a517-4adf-ab21-dfc8f35800da",
+					"id": "3f794fe5-8fe3-4cc7-8696-39d3a87c7dad",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -773,7 +789,7 @@
 				},
 				{
 					"name": "Analisar Crédito",
-					"id": "e4e5fd54-cee3-4502-9637-5b60670dbb68",
+					"id": "e317a981-948f-42ef-ad4a-e14f9d206047",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -818,7 +834,7 @@
 				},
 				{
 					"name": "Listar Análises Pendentes",
-					"id": "7a16573c-21e4-4e3b-b90e-5ed97ea6466e",
+					"id": "a2d06edd-d49d-494e-ab69-61f748168d8f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -851,14 +867,14 @@
 					"response": []
 				}
 			],
-			"id": "46d212c6-8498-4f32-84cc-f2b70f0aae2b"
+			"id": "621d532a-969a-4302-afe9-8d1cc4cc9989"
 		},
 		{
 			"name": "Cotação",
 			"item": [
 				{
 					"name": "Cotar",
-					"id": "56b8eff5-a212-4f50-ae4b-dc8f0e8eab57",
+					"id": "e74cc88d-4db7-4d2d-9ce7-4016ce9f41b1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -904,14 +920,14 @@
 					"response": []
 				}
 			],
-			"id": "097e09f6-878f-45b5-af3a-d41bca68a895"
+			"id": "199f268d-e9b8-4f90-88bf-f9bab7b4b484"
 		},
 		{
 			"name": "Renovação",
 			"item": [
 				{
 					"name": "Listar",
-					"id": "1a2856e3-e02b-4915-bbac-c72b295c23ad",
+					"id": "90c9ab6a-2d32-4000-807a-d9082fa9e6e3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -948,14 +964,14 @@
 					"response": []
 				}
 			],
-			"id": "45ce7af8-9c54-44c5-92b9-ce117888964e"
+			"id": "b9a2bc2f-1ade-4b2b-873f-7cbfa6677079"
 		},
 		{
 			"name": "Combos",
 			"item": [
 				{
 					"name": "Listar Corretoras",
-					"id": "75d7d436-faa4-4c08-9450-6da2df480e3d",
+					"id": "0cc06597-cfa2-447f-bd11-2927a1db6dfb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -997,7 +1013,7 @@
 				},
 				{
 					"name": "Obter Imobiliárias",
-					"id": "a6b582fc-6934-40f8-8967-a968514e9c0b",
+					"id": "99c32192-e77c-4155-b2ef-aafee16691a5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1029,7 +1045,7 @@
 				},
 				{
 					"name": "Obter Detalhe da Imobiliária",
-					"id": "058bab02-1e86-4c8a-94ea-c2d2480029a5",
+					"id": "4f95d34e-5f02-4cf8-a195-2f6bd997ffd3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1070,7 +1086,7 @@
 					"response": []
 				}
 			],
-			"id": "5a24a269-73b1-4bc3-a17d-6f04e374fb07"
+			"id": "f5a22945-4e4f-4881-a23c-370f2b7dfc08"
 		},
 		{
 			"name": "Autenticar",
@@ -1078,7 +1094,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "88bcad3e-52f6-44a8-8b44-27529a9d4b73",
+						"id": "6914306c-252f-40f7-a5f4-620560e9723e",
 						"exec": [
 							"pm.environment.set(\"token\", pm.response.json().access_token);"
 						],
@@ -1086,7 +1102,7 @@
 					}
 				}
 			],
-			"id": "62b3775d-5210-4bf9-b664-6c7aa7342a8d",
+			"id": "e936bee0-14f2-4ae4-bf44-08fd873d7135",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1145,7 +1161,7 @@
 		},
 		{
 			"name": "Listar Recibo Recentes",
-			"id": "734e789b-d379-4518-88db-2ce7095e36f5",
+			"id": "0d748ecf-1375-48f6-8984-7d1459ce5389",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1201,7 +1217,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "690fbd9e-588a-417c-95f1-d97e0bd5bc5d",
+				"id": "8d973205-e40b-48c9-9b88-35a338c75ae3",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1211,7 +1227,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "f6d833b4-f11e-4dd9-950d-aecbfb5ba4e3",
+				"id": "81c5df7d-1de4-47a7-b625-87b4df116936",
 				"type": "text/javascript",
 				"exec": [
 					""

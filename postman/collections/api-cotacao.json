@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "d05bdce5-e3d4-4056-aaf3-49290e07145a",
+		"name": "api-cotacao",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23267791-d05bdce5-e3d4-4056-aaf3-49290e07145a"
+	},
+	"item": [
+		{
+			"name": "v3",
+			"item": [
+				{
+					"name": "precoaluguelgarantido",
+					"id": "322cea6e-af6c-47d1-a3b1-52a4b046d8e2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "clientid",
+								"value": "{{client-id}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cnpjCorretor\": \"28111319000103\",\r\n    \"razaoSocialCorretor\": \"GARDI CORRETORA E ADMINISTRADORA DE SEGUROS LTDA.\",\r\n    \"cep\": \"79071010\",\r\n    \"inicioVigencia\": \"2022-12-19\",\r\n    \"fimVigencia\": \"2025-06-19\",\r\n    \"finalidadeLocacao\": \"Residencial\",\r\n    \"indiceReajusteAluguel\": \"IGPM\",\r\n    \"percentualComissao\": 0.2,\r\n    \"periodoIndAluguel\": 30,\r\n    \"tipoPessoa\": \"Pessoa Fisica\",\r\n    \"tipoSeguro\": \"Novo\",\r\n    \"valorAluguel\": 900,\r\n    \"valorAgua\": 0,\r\n    \"valorCondominio\": 0,\r\n    \"valorGas\": 0,\r\n    \"valorIptu\": 100,\r\n    \"valorLuz\": 0,\r\n    \"valorDanosAMoveis\": 0,\r\n    \"valorDanosAoImovel\": 900,\r\n    \"valorMultasContratuais\": 900,\r\n    \"valorPinturaExterna\": 900,\r\n    \"valorPinturaInterna\": 900\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{api-cotacao}}/api/v3/cotacao/precoaluguelgarantido",
+							"protocol": "http",
+							"host": [
+								"{{api-cotacao}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"cotacao",
+								"precoaluguelgarantido"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "4b57d674-f6f4-4b3a-8d4d-7bfa158898eb"
+		}
+	]
+}
