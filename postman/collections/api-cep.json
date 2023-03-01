@@ -101,7 +101,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5085/v2/Addresses?zipCode=07023022",
+					"raw": "http://localhost:5085/v2/Addresses?zipCode=07023021",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -114,7 +114,7 @@
 					"query": [
 						{
 							"key": "zipCode",
-							"value": "07023022"
+							"value": "07023021"
 						}
 					]
 				}

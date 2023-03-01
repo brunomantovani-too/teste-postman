@@ -32,16 +32,6 @@
 								"key": "Content-Type",
 								"value": "application/json",
 								"type": "text"
-							},
-							{
-								"key": "clientId",
-								"value": "{{portal-client-id}}",
-								"type": "text"
-							},
-							{
-								"key": "clientSecret",
-								"value": "{{portal-client-secret}}",
-								"type": "text"
 							}
 						],
 						"url": {
@@ -203,29 +193,11 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "clientId",
-								"value": "{{portal-client-id}}"
-							},
-							{
-								"key": "clientSecret",
-								"value": "{{portal-client-secret}}"
 							}
 						],
 						"body": {
@@ -256,31 +228,11 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
 								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "clientId",
-								"value": "{{portal-client-id}}",
-								"type": "text"
-							},
-							{
-								"key": "clientSecret",
-								"value": "{{portal-client-secret}}",
 								"type": "text"
 							}
 						],
@@ -313,31 +265,11 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
 								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "clientId",
-								"value": "{{portal-client-id}}",
-								"type": "text"
-							},
-							{
-								"key": "clientSecret",
-								"value": "{{portal-client-secret}}",
 								"type": "text"
 							}
 						],
@@ -619,58 +551,42 @@
 								{
 									"key": "files",
 									"type": "file",
-									"src": [
-										"/C:/Users/brunomantovani/Desktop/ImgTeste.png"
-									]
+									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste.png"
 								},
 								{
 									"key": "files",
 									"type": "file",
-									"src": [
-										"/C:/Users/brunomantovani/Desktop/ImgTeste - Copia.png"
-									]
+									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia.png"
 								},
 								{
 									"key": "files",
 									"type": "file",
-									"src": [
-										"/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (2).png"
-									]
+									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (2).png"
 								},
 								{
 									"key": "files",
 									"type": "file",
-									"src": [
-										"/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (3).png"
-									]
+									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (3).png"
 								},
 								{
 									"key": "files",
 									"type": "file",
-									"src": [
-										"/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (4).png"
-									]
+									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (4).png"
 								},
 								{
 									"key": "files",
 									"type": "file",
-									"src": [
-										"/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (5).png"
-									]
+									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (5).png"
 								},
 								{
 									"key": "files",
 									"type": "file",
-									"src": [
-										"/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (6).png"
-									]
+									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (6).png"
 								},
 								{
 									"key": "files",
 									"type": "file",
-									"src": [
-										"/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (7).png"
-									]
+									"src": "/C:/Users/brunomantovani/Desktop/ImgTeste - Copia (7).png"
 								}
 							]
 						},
